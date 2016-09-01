@@ -12,21 +12,15 @@ var validateEmailStrategy = function(property){
     return validator.isEmail(property);
 };
 
-var ContactSchema = new Schema({
+var HrSchema = new Schema({
 
-    firstName: {
+    password: {
         type: String,
         default: '',
         trim: true,
         validate: [validateFieldStrategy, 'Firstname cannot be empty']
     },
-    lastName: {
-        type: String,
-        default: '',
-        trim: true,
-        validate: [validateFieldStrategy, 'Lastname cannot be empty']
-    },
-    email:{
+        email:{
         type: String,
         default:'',
         trim:true,
@@ -37,4 +31,6 @@ var ContactSchema = new Schema({
 
 });
 
-mongoose.model('PrateekContacts', ContactSchema);
+var hr = mongoose.model('HrContacts', HrSchema);
+
+module.exports = hr;

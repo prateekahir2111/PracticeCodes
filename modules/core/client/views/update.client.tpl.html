@@ -1,4 +1,4 @@
-<div class="contacts-form-container" ng-controller="saveCtrl">
+<div class="contacts-form-container" ng-controller="updateCtrl">
     <form class="bs-example bs-example-form" data-example-id="input-group-sizing">
         <div class="input-group input-group-lg">
             <span class="input-group-addon" id="sizing-addon1">First Name</span>
@@ -25,6 +25,6 @@
             <input class="form-control" placeholder="Username" aria-describedby="sizing-addon5" ng-model="contact.address">
         </div>
         <br>
-        <button type="button" class="btn btn-default" ng-click="saveContact(contact)" value="submit">Submit</button>
+        <button type="button" class="btn btn-default" ng-click="updateContact(contact)" value="submit">Update</button>
     </form>
 </div>

@@ -1,0 +1,17 @@
+ <div class="accordion__container" ng-controller="myCtrl">
+        <div class="accordion__tab">
+            <div class="accordion__tab-title" ng-click="openTab('tab one')">Story 1</div>
+            <div class="accordion__tab-content" ng-show="isOpenTab('tab one')"><p ng-bind="storys[0].Story"></p></div>
+        </div>
+        <!-- .accordion__tab -->
+        <div class="accordion__tab">
+            <div class="accordion__tab-title" ng-click="openTab('tab two')">Story 2</div>
+            <div class="accordion__tab-content" ng-show="isOpenTab('tab two')"><p ng-bind="storys[1].Story"></p></div>
+        </div>
+        <!-- .accordion__tab -->
+        <div class="accordion__tab">
+            <div class="accordion__tab-title" ng-click="openTab('tab three')">Story 3</div>
+            <div class="accordion__tab-content" ng-show="isOpenTab('tab three')"><p ng-bind="storys[2].Story"></p></div>
+        </div>
+        <!-- .accordion__tab -->
+    </div>

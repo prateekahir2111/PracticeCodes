@@ -1,18 +1,43 @@
-'use strict';
+'use strict'
 
-  var mongoose = require('mongoose'),
-      Contact = mongoose.model('SContact');
+var mongoose = require('mongoose'),
+    Contact = mongoose.model('PrateekContacts');
+//https://scotch.io/tutorials/using-mongoosejs-in-node-js-and-mongodb-applications
+
+module.exports.saveContact = function (ContactToSave,callback) {
+    var contact = new Contact(ContactToSave);  // creates a new object whch is of model
+    contact.save(function (err) {
+        callback(err,contact);
+    })
+}
 
 
-module.exports.saveContact = function(savableContact, callback){
+module.exports.getAllContacts = function (callback){
+    // get all the contacts
+    Contact.find({}, function(err,contacts) {
+        callback(err,contacts);
+    });
+}
 
-  var contact = new Contact(savableContact);
 
-  contact.save(function(err){
-      if(err){
-        callback(err);
-      }
-    callback(null,contact );
-  });
+module.exports.findContactById = function (id,callback) {
+    Contact.findById(id, function(err, contact) {
+        callback(err,contact);
+    });
+}
 
-};
+
+module.exports.updateContact = function (id, contactToUpdate,callback) {
+    console.log(contactToUpdate);
+    Contact.findByIdAndUpdate(id,contactToUpdate, function(err, contact) {
+        callback(err,contact);
+    });
+}
+
+
+module.exports.deleteContactById = function (id,callback) {
+    Contact.findByIdAndRemove(id, function(err) {
+        callback(err,{"status":"successfully deleted " + id});
+    });
+
+}

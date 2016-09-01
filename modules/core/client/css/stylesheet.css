@@ -1,0 +1,19 @@
+.accordion__container {
+    background: #eee;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+.accordion__tab {
+    background: #0d14d6;
+    color: #fff;
+    border-bottom: 1px solid white;
+}
+.accordion__tab-title {
+    background: #36ce0f;
+    padding: 5px;
+    cursor: pointer;
+}
+.accordion__tab-content {
+    background: #000000;
+    padding: 20px;
+}

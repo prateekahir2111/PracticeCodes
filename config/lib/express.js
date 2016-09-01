@@ -5,7 +5,10 @@ var express = require('express'),
     consolidate = require('consolidate'),
     swig = require('swig'),
     path = require('path'),
-    config = require('../config');
+    config = require('../config'),
+    cookieParser = require('cookie-parser'),
+    session = require('express-session'),
+    passport = require('passport');
 
 module.exports.init = function(){
     var app = express();
@@ -38,8 +41,3 @@ module.exports.initIgnoreStaticRoutes = function(app){
         app.use(staticPath, express.static(path.resolve('./'+ staticPath)));
     })
 }
-
-
-
-
-

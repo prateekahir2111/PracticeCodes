@@ -1,0 +1,16 @@
+<div class="contacts-form-container" ng-controller="loginCtrl">
+    <form class="bs-example bs-example-form" data-example-id="input-group-sizing">
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon3">Password</span>
+            <input class="form-control" placeholder="Username" aria-describedby="sizing-addon1" ng-model="hr.password">
+        </div>
+        <br>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon4">Email</span>
+            <input class="form-control" placeholder="Username" aria-describedby="sizing-addon1" ng-model="hr.email">
+        </div>
+        <br>
+        <br>
+        <button type="button" class="btn btn-default" ng-click="checkHr(hr)" value="submit">Submit</button>
+    </form>
+</div>

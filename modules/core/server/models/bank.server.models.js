@@ -1,3 +1,10 @@
+/**
+ * Created by Prateek on 8/28/2016.
+ */
+/**
+ * Created by Prateek on 8/15/2016.
+ */
+
 'use strict';
 
 var mongoose = require('mongoose'),
@@ -12,20 +19,8 @@ var validateEmailStrategy = function(property){
     return validator.isEmail(property);
 };
 
-var ContactSchema = new Schema({
+var BankLoginSchema = new Schema({
 
-    firstName: {
-        type: String,
-        default: '',
-        trim: true,
-        validate: [validateFieldStrategy, 'Firstname cannot be empty']
-    },
-    lastName: {
-        type: String,
-        default: '',
-        trim: true,
-        validate: [validateFieldStrategy, 'Lastname cannot be empty']
-    },
     email:{
         type: String,
         default:'',
@@ -33,8 +28,17 @@ var ContactSchema = new Schema({
         unique:true,
         lowercase:true,
         validate:[validateEmailStrategy, 'Please enter valid email id']
+    },
+
+    password: {
+        type: String,
+        default: '',
+        trim: true,
+        validate: [validateFieldStrategy, 'password cannot be empty']
     }
 
 });
 
-mongoose.model('PrateekContacts', ContactSchema);
+var bankingLogin = mongoose.model('banklogin', BankLoginSchema);
+
+module.exports = bankingLogin;
