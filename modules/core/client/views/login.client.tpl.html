@@ -1,16 +1,33 @@
+
 <div class="contacts-form-container" ng-controller="loginCtrl">
-    <form class="bs-example bs-example-form" data-example-id="input-group-sizing">
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon3">Password</span>
-            <input class="form-control" placeholder="Username" aria-describedby="sizing-addon1" ng-model="hr.password">
-        </div>
-        <br>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon4">Email</span>
-            <input class="form-control" placeholder="Username" aria-describedby="sizing-addon1" ng-model="hr.email">
-        </div>
-        <br>
-        <br>
-        <button type="button" class="btn btn-default" ng-click="checkHr(hr)" value="submit">Submit</button>
-    </form>
+    <div id="absolute">
+        <form class="bs-example bs-example-form" data-example-id="input-group-sizing">
+            <br>
+            <br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1">Email</span>
+                <input class="form-control" type="email" placeholder="Email ID" aria-describedby="sizing-addon1" ng-model="hr.email">
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon4">Password</span>
+                <input class="form-control" type="password" placeholder="Password" aria-describedby="sizing-addon1" ng-model="hr.password">
+            </div>
+            <br>
+            <br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon2">First Name</span>
+                <input class="form-control" placeholder="First Name" aria-describedby="sizing-addon1" ng-model="hr.email">
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon3">Last Name</span>
+                <input class="form-control" placeholder="Last Name" aria-describedby="sizing-addon1" ng-model="hr.email">
+            </div>
+            <br>
+            <button type="button" class="btn btn-default" ng-click="checkHr(hr)" value="submit">Submit</button>
+            <br>
+            <br>
+        </form>
+    </div>
 </div>

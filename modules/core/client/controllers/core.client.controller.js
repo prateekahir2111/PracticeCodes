@@ -51,7 +51,7 @@ angular
 
 angular
     .module('ContactsApp')
-    .controller('banklogin', function($scope, $rootElement){
+    .controller('banklogin', function($scope){
 //        $rootElement.navBarDisplay = 1;
     })
 
@@ -70,13 +70,19 @@ angular
 
 angular
     .module('ContactsApp')
-    .controller('loginCtrl', function($scope, $state,ContactService) {
+    .controller('bankloginCtrl', function($scope, $state,ContactService) {
         $scope.checkHr = function (contact) {
-
             ContactService.hrValidate(contact.email, contact.password)
+
                 .success(function (msg) {
-                    $scope.status = msg;});
-            $state.go('display');
+                    console.log(msg)
+                    $scope.status = msg;
+                    $state.go('display')
+                })
+                .error(function(msg){
+                    //$state.go('display')
+                })
+
         }
     })
 

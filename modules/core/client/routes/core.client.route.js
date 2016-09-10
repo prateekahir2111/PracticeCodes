@@ -26,6 +26,11 @@ angular
                         templateUrl: 'modules/core/client/views/banklogin.client.tpl.html'
 
                     })
+                    .state('mainbanklogin',{
+                        url:'/',
+                        templateUrl: 'modules/core/client/views/banklogin.client.tpl.html'
+
+                    })
                     .state('edit',{
                         url:'/edit/:contactId',
                         templateUrl: 'modules/core/client/views/update.client.tpl.html',
@@ -36,5 +41,4 @@ angular
                         },
                         controller: 'Ctrl'
                     })
-
         });

@@ -1,8 +1,24 @@
 
-<div ng-app="ContactsApp">
-
-    <h>{{$rootScope.navBarDisplay}}</h>
-<div ng-controller="banklogin">
-<img ng-src="http://files.sharenator.com/11427_Digital_Amazing_Art_NiceFun_2_1-s1024x768-395350.jpg" alt="W3Schools.com">
-</div>
+<div class="contacts-form-container" ng-controller="bankloginCtrl">
+    <div id="absolute">
+        <form class="bs-example bs-example-form" data-example-id="input-group-sizing">
+            <br>
+            <br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon3">Email</span>
+                <input class="form-control" type="email" placeholder="Email ID" aria-describedby="sizing-addon1" ng-model="hr.email">
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon4">Password</span>
+                <input class="form-control" type="password" placeholder="Password" aria-describedby="sizing-addon1" ng-model="hr.password">
+            </div>
+            <br>
+            <br>
+            <button type="button" class="btn btn-default" ng-click="checkHr(hr)" value="submit">Submit</button>
+            <br>
+            <br>
+            <a ng-click="checkHr(hr)">Not a member? Sign up here</a>
+        </form>
+    </div>
 </div>
