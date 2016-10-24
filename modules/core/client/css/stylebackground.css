@@ -1,15 +1,12 @@
 
 #absolute {
-    background-image: url("http://files.sharenator.com/11427_Digital_Amazing_Art_NiceFun_2_1-s1024x768-395350.jpg");
-    background-color: #000000;
     position: absolute;
     top: 7%;
     left: 0%;
-    padding-left: 400px;
-    padding-right: 400px;
-    padding-top: 150px;
-    width: 100%;
-    height: 100%;
+    padding-left: 100px;
+    padding-top: 100px;
+    width: 40%;
+    height: 20%;
 
 }
 
@@ -34,4 +31,16 @@ a:hover {
 /* selected link */
 a:active {
     color: blue;
+}
+
+
+#another {
+
+
+    padding-left: 600px;
+    padding-right: 50px;
+    padding-top: 100px;
+}
+    p {
+    color: #ff0c05;
 }

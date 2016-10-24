@@ -1,0 +1,46 @@
+
+<div class="contacts-form-container" ng-app="ContactsApp" ng-controller="BodyBuildingCtrl">
+
+        <table>
+
+            <td>
+                <div id="absolute">
+                <form class="bs-example bs-example-form" data-example-id="input-group-sizing">
+            <br>
+            <br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon2">Gender</span>
+                <input class="form-control" type="text" placeholder="Male or Female" aria-describedby="sizing-addon1" ng-model="person.gender">
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon3">Age</span>
+                <input class="form-control" type="number" placeholder="Age" aria-describedby="sizing-addon1" ng-model="person.age">
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon4">Height</span>
+                <input class="form-control" type="number" placeholder="Height" aria-describedby="sizing-addon1" ng-model="person.height">
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon5">Weight</span>
+                <input class="form-control" type="number" placeholder="Weight" aria-describedby="sizing-addon1" ng-model="person.weight">
+            </div>
+            <br>
+            <br>
+            <button type="button" class="btn btn-default" ng-click="calculateCalories(person)" value="submit">Submit</button>
+            <br>
+            <br>
+            <a ng-click="calculateCalories(hr)">Not a member? Sign up here</a>
+        </form>
+                </div>
+            </td>
+            <td>
+
+            <p id="another" ng-bind="caloriesValue"></p>
+            </td>
+            </table>
+
+
+</div>

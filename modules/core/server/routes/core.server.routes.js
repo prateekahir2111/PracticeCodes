@@ -7,6 +7,8 @@ module.exports = function (app) {
     var bankLoginController = require('../controllers/bank.server.controller');
     var accountController = require('../controllers/account.server.controller');
     var accordian = require('../controllers/accordian.server.controller');
+    var calories = require('../controllers/calories.server.controller');
+    var cur = require('../controllers/currency.server.controller');
     app
         .route('/')
         .get(mainController.index);
@@ -32,9 +34,20 @@ module.exports = function (app) {
         .get(accordian.getStory)
 
 
+
+    app
+        .route('/api/bodybuilding/')
+        .post(calories.calorieCount)
+
+
+
     app
         .route('/api/contact/banklogin/:emailId/:password')
         .get(bankLoginController.logIn);
+
+    app
+        .route('/api/currency/')
+        .post(cur.currencyExch);
 
     app
         .route('/api/contact/banklogincreate')

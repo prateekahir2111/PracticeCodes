@@ -41,4 +41,11 @@ angular
                         },
                         controller: 'Ctrl'
                     })
-        });
+
+        $stateProvider
+            .state('calories',{
+                url:'/calories',
+                templateUrl: 'modules/core/client/views/caloriescalculator.client.views.html'
+            })
+
+    });
